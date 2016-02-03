@@ -1,0 +1,508 @@
+//fonts
+@font-face {
+    font-family: 'rockwell-extrabold-webfont';
+    src: url('../fonts/rockwell-extrabold-webfont.eot');
+    src: url('../fonts/rockwell-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/rockwell-extrabold-webfont.woff2') format('woff2'), url('../fonts/rockwell-extrabold-webfont.woff') format('woff'), url('../fonts/rockwell-extrabold-webfont.ttf') format('truetype'), url('../fonts/rockwell-extrabold-webfont.svg#rockwell-extrabold-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} //Content wrapper
+.wrap {}
+
+a {
+    color: (@brand-primary);
+}
+
+p {
+    font-family: @sub-font;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    color: @brand-secondary;
+    font-family: 'Rockwell Extra Bold', 'Rockwell Bold', 'rockwell-extrabold-webfont', monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+h1 {
+    color: @brand-primary;
+}
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.row {
+    margin-top: 20px;
+    border-bottom: 1px solid;
+    &.left, &.right {
+        padding: 40px 0px;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+    .row {
+        float: left;
+        width: 100%;
+    }
+}
+
+.forms.row {
+    float: none;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+.content.row {
+    padding: 0;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.fb-like-box,
+.fb-like-box span,
+.fb-like-box span iframe,
+.fb-like-box span img {
+    width: 100% !important;
+    background: #fff
+}
+
+.fb_iframe_widget,
+.insta-feed iframe {
+    background: (@brand-secondary);
+}
+
+// Main content area
+.main {
+    .make-sm-column(@main-sm-columns);
+    .sidebar-primary & {
+        .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
+    }
+}
+
+.home {}
+
+#social {
+    margin: 5px auto;
+    > div {
+        padding: 20px 34px 9px;
+        vertical-align: top;
+        @media @smartphones {
+            width: 100%;
+        }
+        iframe {
+            width: 100%!important;
+            min-height: 740px!important;
+        }
+    }
+    a.fts-powered-by-text {
+        display: none!important;
+    }
+    .fts-jal-fb-user-name,
+    .fts-jal-fb-name {
+        color: (@brand-secondary);
+    }
+}
+
+#sb_instagram {
+    background: #fff;
+}
+
+.wp-image-115 {
+    padding-top: 17px;
+}
+
+.fts-twitter-div a {
+    color: (@brand-primary);
+}
+
+#map-canvas,
+#map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.main .style-dark_style blockquote.easy_testimonial {
+    background-color: rgba(170, 170, 170, 0.75);
+    border:0;
+    border-radius: 0;
+    color: #000;
+    padding: 10px;
+    margin: 10px auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-weight: bold;
+}
+#case-stdy {
+        background-color: rgba(170,170,170,0.75);
+        padding: 20px;
+        img {
+                width: 210px;
+                height: auto;
+                @media @smartphones {
+                        width: 100%;
+            }
+        }
+        p.quote {
+                padding: 0 60px;
+                font-size: 22px;
+                font-style: italic;
+        }
+}
+.text-center {
+    p {
+        text-align: center;
+    }
+}
+/* equal height social http://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height */
+/* columns of same height styles */
+
+.container-xs-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -14px;
+}
+
+.row-xs-height {
+    display: table-row;
+}
+
+.col-xs-height {
+    display: table-cell;
+    float: left;
+}
+
+//home page form buttons
+.forms {
+    >div.col-md-4 {
+        width: 25.4%;
+        cursor: pointer;
+        font-size: 18px;
+        color: (@brand-primary);
+        text-align: center;
+        margin: 34px 45px 10px;
+        padding: 15px;
+        border: 1px solid;
+        background: rgba(0, 0, 0, 0.5);
+        @media @wide-tablets {
+              margin: 34px 37px 10px;
+        }
+        @media @smartphones, @tablets {
+            width: auto;
+        }
+    }
+    .form-holder {}
+}
+
+.caret {
+    border-top: 12px solid;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+div.wpcf7 {
+    display: none;
+    width: 520px;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    margin-top:-608px;
+    left: 50%;
+    margin-left: -250px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    &:hover {}
+    @media @smartphones {
+        width: 320px;
+        margin-left: -160px;
+    }
+    input,
+    textarea {
+        width: 100%;
+        color: #909090;
+        margin: 10px 0;
+        padding: 3px 10px;
+        border: 0;
+        &.wpcf7-submit {
+            color: #333;
+        }
+    }
+    select {
+        color:#000000;
+    }
+    input[type="submit"],
+    input[type="button"] {
+        color: #000;
+        background-color:@brand-primary;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+    }
+    select[multiple],
+    select[size] {
+        height: auto;
+        color: #000;
+    }
+    span.wpcf7-list-item {
+        margin-left: 0.5em;
+        width: 100%;
+        display: inline;
+    }
+    .injury {
+        span.wpcf7-list-item {
+            margin-left: 2.5em;
+        }
+    }
+    h4 {
+        color:@brand-primary;
+    }
+}
+div.wpcf7-response-output {
+    position: absolute;
+      top: 0;
+      left:0;
+      margin-top: -21px;
+      font-size: 85%;
+      @media @smartphones {
+        position: static;
+              margin-top: 0;
+
+      }
+
+}
+.close {
+    color:#fff!important;
+    font-family:Times;
+    opacity: 1;
+    display: none;
+    @media @wide-tablets {
+        position: fixed;
+        top:15px;
+        right:15px;
+        z-index: 1234;
+    }
+}
+div#wpcf7-f232-p2-o2,
+div#wpcf7-f232-p233-o2,
+div#wpcf7-f79-p2-o2 {
+    width: 980px;
+    height: 580px;
+    overflow-y: scroll;
+    padding: 40px 80px;
+    position: relative;
+    margin-left: -460px;
+    margin-top: -290px;
+    border: 1px solid @brand-primary;
+            @media @wide-tablets {
+                width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  margin: 0;
+                  position: absolute;
+                  -webkit-overflow-scrolling: touch;
+            }
+            @media @smartphones {
+                padding:10px;
+            }
+    .wpcf7-form {
+        position: relative;
+        top: 0;
+    }
+    p {
+        font-size: 14px;
+    }
+    section {
+        position: absolute;
+        display: none;
+        width: 100%;
+        padding-bottom: 45px;
+            @media @smartphones {
+                padding-bottom: 0;
+                position: static;
+        }
+        h2 {
+            font-family: inherit;
+        }
+        &.first {
+            display: block;
+        }
+    }
+}
+
+.soma-type {
+    font-family: @sub-font;
+    font-size: 0.9em;
+    b {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    &.row {
+        float: none;
+        border: 0;
+    }
+    ul {
+        padding-left: 15px;
+    }
+}
+
+.red {
+    color: red;
+}
+
+.fixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -420px;
+    text-align: right;
+}
+
+.cover {
+    background: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5000;
+}
+
+.logos.row {
+    margin-top: 20px;
+    border: 0;
+    > div {
+        text-align: center;
+    }
+    img {
+        @media @widescreen {
+            width: 30%;
+            height: auto;
+        }
+    }
+}
+
+.main {
+    >.row, .symple-column > .row {
+        @media @smartphones {
+            padding: 10px;
+            margin: 0;
+        }
+    }
+}
+
+.fullwidthbanner-container {
+    @media @smartphones {
+        margin-top: 20px!important;
+    }
+}
+
+#map-canvas img,
+#map img {
+    max-width: none
+}
+
+#press {
+    .aligncenter {
+        width: 100%;
+    }
+}
+
+#sb_instagram {
+    @media @wide-tablets {
+        height: 741px;
+        overflow: hidden;
+    }
+    &.sbi_col_3 {
+        #sbi_images {
+            .sbi_item {
+                @media @wide-tablets {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-height: 732px){
+    div.wpcf7 {
+        position: static;
+        width: 100%;
+        margin:0;
+         overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+        height: 100vh;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container-sm-height {
+        display: table;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .row-sm-height {
+        display: table-row;
+    }
+    .col-sm-height {
+        display: table-cell;
+        float: none;
+    }
+    .col-xs-height {
+        display: table-cell;
+        float: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-md-height {
+        display: table;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .row-md-height {
+        display: table-row;
+    }
+    .col-md-height {
+        display: table-cell;
+        float: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display: table;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .row-lg-height {
+        display: table-row;
+    }
+    .col-lg-height {
+        display: table-cell;
+        float: none;
+    }
+}

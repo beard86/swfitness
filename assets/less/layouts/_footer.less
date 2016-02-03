@@ -1,0 +1,43 @@
+.content-info { }
+
+footer {
+	.widget {
+		padding: 40px;
+		text-align: center;
+	}
+	.text-3 {
+		color: (@brand-primary);
+		background: transparent;
+		margin-top: 20px;
+		padding: 0;
+		    overflow: hidden;
+		img {
+			width:97%;
+			transition: all 2s ease-in-out; 	
+			&:hover { 
+				transform: scale(1.1); 
+			}
+		}
+		span.promo {
+			white-space: nowrap;
+			display: block;
+			margin-top: 25px;
+		}
+	}
+	.container {
+		padding-left: 0;
+	    padding-right: 30px;
+	    @media @smartphones {
+	            padding-left: 15px;
+			    padding-right: 15px;
+	    }
+	}
+}
+.home {
+	footer {
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
